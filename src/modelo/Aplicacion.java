@@ -6,6 +6,9 @@ import java.util.*;
  * 
  */
 public class Aplicacion {
+	
+    private TablaDePosiciones tablaDePosiciones;
+    private Jugador jugador;
 
     /**
      * Default constructor
@@ -13,25 +16,6 @@ public class Aplicacion {
     public Aplicacion() {
     }
 
-    /**
-     * 
-     */
-    private TablaDePosiciones tablaDePosiciones;
-
-    /**
-     * 
-     */
-    private Jugador jugador;
-
-
-
-
-
-
-
-    /**
-     * 
-     */
     public void menu() {
         // TODO implement here
     }

@@ -6,17 +6,14 @@ import java.util.*;
  * 
  */
 public class Bateria extends ObjetoDelMapa {
+	
+    private float velocidad;
 
     /**
      * Default constructor
      */
     public Bateria() {
     }
-
-    /**
-     * 
-     */
-    private float velocidad;
 
     /**
      * @param x 

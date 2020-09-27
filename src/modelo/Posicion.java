@@ -6,25 +6,16 @@ import java.util.*;
  * 
  */
 public class Posicion {
+	
+    private float posicionX = 0;
+    private float posicionY = 0;
 
     /**
      * Default constructor
      */
     public Posicion() {
     }
-
-    /**
-     * 
-     */
-    private float posicionX = 0;
-
-    /**
-     * 
-     */
-    private float posicionY = 0;
-
-
-
+    
     /**
      * @param x 
      * @param y

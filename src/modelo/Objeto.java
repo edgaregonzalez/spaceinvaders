@@ -6,32 +6,16 @@ import java.util.*;
  * 
  */
 public abstract class Objeto {
+	
+    private Posicion posicion;
+    private Area area;
+    private boolean activo = true;
 
     /**
      * Default constructor
      */
     public Objeto() {
     }
-
-    /**
-     * 
-     */
-    private Posicion posicion;
-
-    /**
-     * 
-     */
-    private Area area;
-
-    /**
-     * 
-     */
-    private boolean activo = true;
-
-
-
-
-
 
     /**
      * @param x 

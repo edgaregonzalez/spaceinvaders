@@ -6,40 +6,18 @@ import java.util.*;
  * 
  */
 public class Batallon {
-
-    /**
-     * Default constructor
-     */
-    public Batallon() {
-    }
-
-    /**
+	
+	/**
      * Debe crear 3 grupos de 5 un total de 15 enemigos
      */
     private Nave enemigos;
-
-    /**
-     * 
-     */
     private int enemigosPorFila = 5;
-
-    /**
-     * 
-     */
     private float velocidad;
-
-    /**
-     * 
-     */
     private float distanciaEntreNaves;
-
-    /**
-     * 
-     */
     private float distanciaEntreFilas;
-
-
-
+    
+    public Batallon() {
+    }
 
     /**
      * @return

@@ -6,22 +6,16 @@ import java.util.*;
  * 
  */
 public class Proyectil extends ObjetoDelMapa {
+	
+
+    private float velocidad;
+    private boolean direccionHaciaArriba;
 
     /**
      * Default constructor
      */
     public Proyectil() {
     }
-
-    /**
-     * 
-     */
-    private float velocidad;
-
-    /**
-     * 
-     */
-    private boolean direccionHaciaArriba;
 
     /**
      * @param x 

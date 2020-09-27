@@ -6,23 +6,15 @@ import java.util.*;
  * 
  */
 public class Area extends Objeto {
+	
+    private float ancho;
+    private float alto;
 
     /**
      * Default constructor
      */
     public Area() {
     }
-
-    /**
-     * 
-     */
-    private float ancho;
-
-    /**
-     * 
-     */
-    private float alto;
-
 
     /**
      * @param ancho 

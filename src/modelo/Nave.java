@@ -13,8 +13,6 @@ public class Nave extends ObjetoDelMapa {
     public Nave() {
     }
 
-
-
     /**
      * @param x 
      * @param y 

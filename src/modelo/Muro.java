@@ -7,16 +7,13 @@ import java.util.*;
  */
 public class Muro extends ObjetoDelMapa {
 
+    private int vida = 100;
+    
     /**
      * Default constructor
      */
     public Muro() {
     }
-
-    /**
-     * 
-     */
-    private int vida = 100;
 
     /**
      * @param x 

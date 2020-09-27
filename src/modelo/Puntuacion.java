@@ -7,23 +7,14 @@ import java.util.*;
  */
 public class Puntuacion {
 
+    private String jugador;
+    private int puntuacion;
+
     /**
      * Default constructor
      */
     public Puntuacion() {
     }
-
-    /**
-     * 
-     */
-    private String jugador;
-
-    /**
-     * 
-     */
-    private int puntuacion;
-
-
 
     /**
      * @param jugador 

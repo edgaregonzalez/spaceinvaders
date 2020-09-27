@@ -6,18 +6,14 @@ import java.util.*;
  * 
  */
 public abstract class ObjetoDelMapa extends Objeto {
-
+    
+	public Mapa mapa;
+	
     /**
      * Default constructor
      */
     public ObjetoDelMapa() {
     }
-
-    /**
-     * 
-     */
-    public Mapa mapa;
-
 
     /**
      * @param mapa

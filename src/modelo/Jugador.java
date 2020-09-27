@@ -6,37 +6,21 @@ import java.util.*;
  * 
  */
 public class Jugador {
+	
+
+
+    private String nombre;
+    private int nivel = 0;
+    private int vidas = 3;
+    private int puntuacion = 0;
+    private int puntuacionRestante = 500;
+
 
     /**
      * Default constructor
      */
     public Jugador() {
     }
-
-    /**
-     * 
-     */
-    private String nombre;
-
-    /**
-     * 
-     */
-    private int nivel = 0;
-
-    /**
-     * 
-     */
-    private int vidas = 3;
-
-    /**
-     * 
-     */
-    private int puntuacion = 0;
-
-    /**
-     * 
-     */
-    private int puntuacionRestante = 500;
 
     /**
      * @param nombre

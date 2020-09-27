@@ -6,6 +6,8 @@ import java.util.*;
  * 
  */
 public class TablaDePosiciones {
+	
+	private Posicion puntuaciones;
 
     /**
      * Default constructor
@@ -13,19 +15,6 @@ public class TablaDePosiciones {
     public TablaDePosiciones() {
     }
 
-    /**
-     * 
-     */
-    private Posicion puntuaciones;
-
-
-
-
-
-
-    /**
-     * 
-     */
     public void imprimirTabla() {
         // TODO implement here
     }
