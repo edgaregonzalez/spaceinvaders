@@ -1,2 +1,2 @@
-# spaceinvader
-Java - Space Invader
+# spaceinvaders
+Java - Space Invaders
