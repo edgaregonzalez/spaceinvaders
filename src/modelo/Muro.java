@@ -29,13 +29,13 @@ public class Muro extends ObjetoDelMapa {
      */
     public int vida() {
         // TODO implement here
-        return 0;
+        return vida;
     }
 
     /**
      * @param daño
      */
-    public void recibirDaño(int daño) {
+    public void recibirDaño(int dano) {
         // TODO implement here
     }
 
