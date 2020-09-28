@@ -8,12 +8,6 @@ import java.util.*;
 public class Muro extends ObjetoDelMapa {
 
     private int vida = 100;
-    
-    /**
-     * Default constructor
-     */
-    public Muro() {
-    }
 
     /**
      * @param x 
@@ -25,25 +19,22 @@ public class Muro extends ObjetoDelMapa {
     }
 
     /**
-     * @return
+     * @return vida
      */
     public int vida() {
-        // TODO implement here
+    	
         return vida;
     }
 
     /**
-     * @param daño
+     * @param dano
      */
     public void recibirDaño(int dano) {
-        // TODO implement here
+        this.vida = this.vida - dano;
     }
 
-    /**
-     * 
-     */
     public void reiniciar() {
-        // TODO implement here
+        this.vida = 100;
     }
 
 }
