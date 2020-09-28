@@ -4,11 +4,9 @@ import java.util.*;
 
 import modelo.Batallon;
 import modelo.Bateria;
-import modelo.Estados;
 import modelo.Jugador;
 import modelo.Mapa;
 import modelo.Muro;
-import modelo.Objeto;
 import modelo.Proyectil;
 
 
@@ -21,7 +19,6 @@ public class ControladorPartida {
     private Muro muro;
     private Batallon batallon;
     private Proyectil proyectiles[];
-    private Estados estado;
     private int dificultad;
     private float reloj;
     
