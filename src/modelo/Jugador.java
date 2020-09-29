@@ -1,7 +1,5 @@
 package modelo;
 
-import java.util.*;
-
 /**
  * 
  */
@@ -15,79 +13,71 @@ public class Jugador {
     private int puntuacion = 0;
     private int puntuacionRestante = 500;
 
-
     /**
      * Default constructor
-     */
-    public Jugador() {
-    }
-
-    /**
      * @param nombre
      */
-    public void Jugador(String nombre) {
-        // TODO implement here
+    public Jugador(String nombre) {
+        this.nombre = nombre;
     }
 
     /**
      * @return
      */
-    public String conseguirNombre() {
-        // TODO implement here
-        return null;
-    }
+    public String conseguirNombre() { return nombre; }
 
     /**
      * @return
      */
-    public int conseguirNivel() {
-        // TODO implement here
-        return 0;
-    }
+    public int conseguirNivel() { return nivel; }
 
     /**
      * @return
      */
-    public int conseguirVidas() {
-        // TODO implement here
-        return 0;
-    }
+    public int conseguirVidas() { return vidas; }
 
     /**
      * @return
      */
-    public int conseguirPuntuacion() {
-        // TODO implement here
-        return 0;
-    }
+    public int conseguirPuntuacion() { return puntuacion; }
 
     /**
      * 
      */
     public void incrementarNivel() {
-        // TODO implement here
+        nivel++;
+        incrementarPuntuacion(200);
     }
 
     /**
      * 
      */
-    public void incrementarPuntuacion() {
-        // TODO implement here
+    public void incrementarPuntuacion(int cantidad) {
+        if(cantidad <= 0) { return; }
+    	puntuacionRestante -= cantidad;
+    	if(puntuacionRestante <= 0) 
+    	{
+    		puntuacionRestante = 500;
+    		incrementarVidas();
+    	}
+    	puntuacion += cantidad;
     }
 
     /**
      * @return
      */
     public boolean disminuirVidas() {
-        // TODO implement here
-        return true;
+        if(vidas > 0) 
+        {
+        	vidas--;
+        	return true;
+        }
+        else { return false; }
     }
 
     /**
      * 
      */
-    private void incrementarVidas() {
-        // TODO implement here
-    }
+    private void incrementarVidas() { vidas++; }
 
 }
