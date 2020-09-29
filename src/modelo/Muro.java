@@ -23,7 +23,7 @@ public class Muro extends ObjetoDelMapa {
      */
     public int vida() {
     	
-        return vida;
+        return this.vida;
     }
 
     /**
