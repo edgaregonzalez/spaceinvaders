@@ -1,6 +1,5 @@
 package modelo;
 
-import java.util.*;
 
 /**
  * 
@@ -13,75 +12,50 @@ public abstract class Objeto {
 
     /**
      * Default constructor
-     */
-    public Objeto() {
-    }
-
-    /**
      * @param x 
      * @param y 
      * @param ancho 
      * @param alto
      */
-    public void Objeto(float x, float y, float ancho, float alto) {
-        // TODO implement here
+    public Objeto(float x, float y, float ancho, float alto) {
+        posicion = new Posicion(x, y);
+        area = new Area(ancho, alto);
     }
 
     /**
      * @return
      */
-    public Posicion devolverPosicion() {
-        // TODO implement here
-        return null;
-    }
+    public Posicion devolverPosicion() { return posicion; }
 
     /**
      * @return
      */
-    public Area devolverArea() {
-        // TODO implement here
-        return null;
-    }
+    public Area devolverArea() { return area; }
 
     /**
      * @param colisionante 
      * @return
      */
     public boolean verificarColision(Objeto colisionante) {
-        // TODO implement here
-        return false;
-    }
-
-    /**
-     * @param x 
-     * @return
-     */
-    public float xRelativo(float x) {
-        // TODO implement here
-        return 0.0f;
-    }
-
-    /**
-     * @param y 
-     * @return
-     */
-    public float yRelativo(float y) {
-        // TODO implement here
-        return 0.0f;
+        if(
+        		activo && 
+        		colisionante.conseguirEstado() &&
+        		colisionante.devolverPosicion().x() >= (posicion.x() - colisionante.devolverArea().devolverAncho()) &&
+        		colisionante.devolverPosicion().x() <= (posicion.x() + area.devolverAncho()) &&
+        		colisionante.devolverPosicion().y() >= (posicion.y() - colisionante.devolverArea().devolverAlto()) &&
+        		colisionante.devolverPosicion().y() <= (posicion.y() + area.devolverAlto())
+        ) { return true; }
+        else { return false; }
     }
 
     /**
      * 
      */
-    public void conseguirEstado() {
-        // TODO implement here
-    }
+    public Boolean conseguirEstado() { return activo; }
 
     /**
      * @param estado
      */
-    public void cambiarEstado(boolean estado) {
-        // TODO implement here
-    }
+    public void cambiarEstado(boolean estado) { activo = estado; }
 
 }

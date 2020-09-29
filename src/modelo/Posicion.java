@@ -1,6 +1,5 @@
 package modelo;
 
-import java.util.*;
 
 /**
  * 
@@ -12,54 +11,41 @@ public class Posicion {
 
     /**
      * Default constructor
-     */
-    public Posicion() {
-    }
-    
-    /**
      * @param x 
      * @param y
      */
-    public void Posicion(float x, float y) {
-        // TODO implement here
+    public Posicion(float x, float y) {
+        posicionX = x;
+        posicionY = y;
     }
 
     /**
      * @return
      */
-    public float x() {
-        // TODO implement here
-        return 0.0f;
-    }
+    public float x() { return posicionX; }
 
     /**
      * @return
      */
-    public float y() {
-        // TODO implement here
-        return 0.0f;
-    }
+    public float y() { return posicionY; }
 
     /**
      * @param x
      */
-    public void cambiarX(float x) {
-        // TODO implement here
-    }
+    public void cambiarX(float x) { posicionX = x; }
 
     /**
      * @param y
      */
-    public void cambiarY(float y) {
-        // TODO implement here
-    }
+    public void cambiarY(float y) { posicionY = y; }
 
     /**
      * @param x 
      * @param y
      */
     public void nuevaPosicion(float x, float y) {
-        // TODO implement here
+        posicionX = x;
+        posicionY = y;
     }
 
 }

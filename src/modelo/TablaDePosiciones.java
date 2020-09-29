@@ -1,36 +1,38 @@
 package modelo;
 
-import java.util.*;
-
 /**
  * 
  */
 public class TablaDePosiciones {
 	
-	private Posicion puntuaciones;
+	private Puntuacion[] puntuaciones;
 
     /**
      * Default constructor
      */
     public TablaDePosiciones() {
+    	puntuaciones = new Puntuacion[10];
+    	for(int i = 0; i < 10; i++) { puntuaciones[i] = new Puntuacion("", 0); }
     }
 
-    public void imprimirTabla() {
-        // TODO implement here
-    }
+    public Puntuacion[] devolverTabla() { return puntuaciones; }
 
     /**
      * @param jugador
      */
-    public void nuevaPuntuación(Jugador jugador) {
-        // TODO implement here
+    public void nuevaPuntuacion(Jugador jugador) {
+        Boolean insertado = false;
+        for(int i = 0; i < 10; i++) 
+        {
+        	if(!insertado && puntuaciones[i].conseguirPuntuacion() < jugador.conseguirPuntuacion()) { insertado = true; }
+        	if(insertado) 
+        	{
+        		Puntuacion puntuacion = new Puntuacion(jugador.conseguirNombre(), jugador.conseguirPuntuacion());
+        		Puntuacion auxiliar;
+        		auxiliar = puntuaciones[i];
+        		puntuaciones[i] = puntuacion;			
+        		puntuacion = auxiliar;
+        	}
+        }
     }
-
-    /**
-     * 
-     */
-    private void ordenarTabla() {
-        // TODO implement here
-    }
-
 }

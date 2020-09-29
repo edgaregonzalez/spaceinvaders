@@ -1,33 +1,40 @@
 package modelo;
 
-import java.util.*;
-
 /**
  * 
  */
 public class Bateria extends ObjetoDelMapa {
 	
-    private float velocidad;
+    private float velocidad = 1.0f;
 
     /**
      * Default constructor
-     */
-    public Bateria() {
-    }
-
-    /**
      * @param x 
      * @param mapa
      */
-    public void Bateria(float x, Mapa mapa) {
-        // TODO implement here
+    public Bateria(float x, Mapa mapa) {
+        super(mapa);
+        this.posicionRelativa(x, 10);
     }
 
     /**
      * @param aLaDerecha
      */
     public void desplazarHorizontalmente(boolean aLaDerecha) {
-        // TODO implement here
+        if(aLaDerecha) 
+        {
+        	if(this.estaDentroDelMapa(this.devolverPosicion().x() + velocidad, this.devolverPosicion().y(), this.devolverArea().devolverAncho(), this.devolverArea().devolverAlto())) 
+        	{
+        		this.posicionRelativa(this.xRelativo() + velocidad, this.yRelativo());
+        	}
+        }
+        else 
+        {
+        	if(this.estaDentroDelMapa(this.devolverPosicion().x() - velocidad, this.devolverPosicion().y(), this.devolverArea().devolverAncho(), this.devolverArea().devolverAlto())) 
+        	{
+        		this.posicionRelativa(this.xRelativo() - velocidad, this.yRelativo());
+        	}
+        }
     }
 
 }

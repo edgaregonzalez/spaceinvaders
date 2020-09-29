@@ -1,6 +1,5 @@
 package modelo;
 
-import java.util.*;
 
 /**
  * 
@@ -12,30 +11,22 @@ public class Puntuacion {
 
     /**
      * Default constructor
-     */
-
-    /**
      * @param jugador 
      * @param puntuacion
      */
-    public void Puntuacion(String jugador, int puntuacion) {
-        // TODO implement here
+    public Puntuacion(String jugador, int puntuacion) {
+        this.jugador = jugador;
+        this.puntuacion = puntuacion;
     }
 
     /**
      * @return
      */
-    public String conseguirJugador() {
-        // TODO implement here
-        return null;
-    }
+    public String conseguirJugador() { return jugador; }
 
     /**
      * @return
      */
-    public int conseguirpuntuacion() {
-        // TODO implement here
-        return 0;
-    }
+    public int conseguirPuntuacion() { return puntuacion; }
 
 }
