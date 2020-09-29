@@ -1,7 +1,5 @@
 package modelo;
 
-import java.util.*;
-
 /**
  * 
  */
@@ -12,22 +10,19 @@ public class Nave extends ObjetoDelMapa {
      * @param y 
      * @param mapa
      */
-    public void Nave(float x, float y, Mapa mapa) {
-    	
+    public Nave(float x, float y,Mapa mapa) {
+    	super(mapa);
+    	this.posicionRelativa(x, y);
     }
 
     /**
      * 
      */
-    public void eliminarNave() {
-        // TODO implement here
-    }
+    public void eliminarNave() { this.cambiarEstado(false); }
 
     /**
      * 
      */
-    public void reiniciar() {
-        // TODO implement here
-    }
+    public void reiniciar() { this.cambiarEstado(true); }
 
 }

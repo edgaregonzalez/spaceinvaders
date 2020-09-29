@@ -1,60 +1,48 @@
 package modelo;
-
-import java.util.*;
-
 /**
  * 
  */
-public class Area extends Objeto {
+public class Area {
 	
     private float ancho;
     private float alto;
 
-        /**
+     /**
      * Default constructor
      * @param ancho 
      * @param alto
      */
     public Area(float ancho, float alto) {
-        // TODO implement here
+        this.ancho = ancho;
+        this.alto = alto;
     }
 
     /**
      * @return
      */
-    public float devolverAncho() {
-        // TODO implement here
-        return 0.0f;
-    }
+    public float devolverAncho() { return ancho; }
 
     /**
      * @return
      */
-    public float devolverAlto() {
-        // TODO implement here
-        return 0.0f;
-    }
+    public float devolverAlto() { return alto; }
 
     /**
      * @param ancho
      */
-    public void cambiarAncho(float ancho) {
-        // TODO implement here
-    }
+    public void cambiarAncho(float ancho) { this.ancho = ancho; }
 
     /**
      * @param alto
      */
-    public void cambiarAlto(float alto) {
-        // TODO implement here
-    }
+    public void cambiarAlto(float alto) { this.alto = alto; }
 
     /**
      * @param ancho 
      * @param alto
      */
     public void cambiarTamaño(float ancho, float alto) {
-        // TODO implement here
+        this.ancho = ancho;
+        this.alto = alto;
     }
-
 }
