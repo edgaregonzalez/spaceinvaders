@@ -1,7 +1,5 @@
 package modelo;
 
-import java.util.*;
-
 /**
  * 
  */
@@ -10,44 +8,47 @@ public class Batallon {
 	/**
      * Debe crear 3 grupos de 5 un total de 15 enemigos
      */
-    private Nave enemigos;
+    private Nave[] enemigos;
+    private int filas = 3;
     private int enemigosPorFila = 5;
-    private float velocidad;
-    private float distanciaEntreNaves;
-    private float distanciaEntreFilas;
+    private float velocidad = 1.0f;
+    private float distanciaEntreNaves = 0.2f;
+    private float distanciaEntreFilas = 0.2f;
     
-    public Batallon() {
+    public Batallon(Mapa mapa) {
+    	enemigos = new Nave[enemigosPorFila * filas];
+    	for(int i = 0; i < filas; i++) 
+    	{
+    		for(int j = 0; j < enemigosPorFila; j++) 
+    		{
+    			enemigos[j + i*3] = new Nave(( ( j + 1 ) * (distanciaEntreNaves + 1) ), 50 + (i * (distanciaEntreFilas + 1)), mapa);
+    		}
+    	}
     }
 
     /**
      * @return
      */
-    public boolean moverBatallon() {
-        // TODO implement here
-        return false;
+    public void moverBatallon() {
+        if(enemigos[0].xRelativo() + velocidad <= 0 || enemigos[enemigosPorFila - 1].xRelativo() + velocidad >= enemigos[enemigosPorFila - 1].mapa.devolverArea().devolverAncho()) 
+        {
+        	velocidad = -velocidad; 
+        	for(int i = 0; i < 15; i++) { enemigos[i].posicionRelativa(enemigos[i].xRelativo(), enemigos[i].yRelativo() - Math.abs(velocidad)); }
+        }
+        else { for(int i = 0; i < 15; i++) { enemigos[i].posicionRelativa(enemigos[i].xRelativo() + velocidad, enemigos[i].yRelativo()); } }
     }
 
     /**
      * @return
      */
-    public Set<Nave> devolverNaves() {
-        // TODO implement here
-        return null;
-    }
+    public Nave[] devolverNaves() { return enemigos; }
 
     /**
      * @return
      */
     public int enemigosRestantes() {
-        // TODO implement here
-        return 0;
+        int cantidad = 0;
+    	for(int i = 0; i < 15; i++) { if(enemigos[i].conseguirEstado()) { cantidad++; } }
+        return cantidad;
     }
-
-    /**
-     * 
-     */
-    public void reiniciar() {
-        // TODO implement here
-    }
-
 }
