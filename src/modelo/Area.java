@@ -10,17 +10,12 @@ public class Area extends Objeto {
     private float ancho;
     private float alto;
 
-    /**
+        /**
      * Default constructor
-     */
-    public Area() {
-    }
-
-    /**
      * @param ancho 
      * @param alto
      */
-    public void Area(float ancho, float alto) {
+    public Area(float ancho, float alto) {
         // TODO implement here
     }
 
@@ -58,7 +53,7 @@ public class Area extends Objeto {
      * @param ancho 
      * @param alto
      */
-    public void cambiarTamaÃ±o(float ancho, float alto) {
+    public void cambiarTamaño(float ancho, float alto) {
         // TODO implement here
     }
 

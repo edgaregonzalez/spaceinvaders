@@ -22,7 +22,7 @@ public class TablaDePosiciones {
     /**
      * @param jugador
      */
-    public void nuevaPuntuación(Jugador jugador) {
+    public void nuevaPuntuacion(Jugador jugador) {
         // TODO implement here
     }
 

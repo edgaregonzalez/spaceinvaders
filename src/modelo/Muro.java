@@ -10,11 +10,12 @@ public class Muro extends ObjetoDelMapa {
     private int vida = 100;
 
     /**
+     * Default Constructor
      * @param x 
      * @param y 
      * @param mapa
      */
-    public void Muro(float x, float y, Mapa mapa) {
+    public Muro(float x, float y, Mapa mapa) {
         // TODO implement here
     }
 
@@ -29,7 +30,7 @@ public class Muro extends ObjetoDelMapa {
     /**
      * @param dano
      */
-    public void recibirDaÃ±o(int dano) {
+    public void recibirDaño(int dano) {
         this.vida = this.vida - dano;
     }
 
