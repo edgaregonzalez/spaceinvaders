@@ -26,8 +26,8 @@ public class Muro extends ObjetoDelMapa {
     /**
      * @param dano
      */
-    public void recibirDaño(int daño) {
-        if( (vida - daño) > 0 ) { vida -= daño; }
+    public void recibirDano(int dano) {
+        if( (vida - dano) > 0 ) { vida -= dano; }
         else 
         {
         	vida = 0;
