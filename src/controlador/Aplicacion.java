@@ -1,6 +1,9 @@
-package modelo;
+package controlador;
 
 import java.util.*;
+
+import modelo.Jugador;
+import modelo.TablaDePosiciones;
 
 /**
  * 
