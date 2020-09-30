@@ -75,7 +75,7 @@ public class Partida {
     			{
         			if(p.verificarColision(m)) 
         			{
-        				m.recibirDaño(10);
+        				m.recibirDano(10);
         				p.eliminarProyectil();
         			}    				
     			} 			
@@ -100,7 +100,7 @@ public class Partida {
     			{
         			if(p.verificarColision(m)) 
         			{
-        				m.recibirDaño(5); 
+        				m.recibirDano(5); 
         				p.eliminarProyectil();
         			}
     			}
@@ -131,4 +131,5 @@ public class Partida {
     }
     
     private void fin() { estado = Estados.Fin; }
+
 }
