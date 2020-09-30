@@ -10,6 +10,7 @@ import modelo.TablaDePosiciones;
  */
 public class Aplicacion {
 	
+
     private TablaDePosiciones tablaDePosiciones;
     private Jugador jugador;
 
@@ -19,6 +20,7 @@ public class Aplicacion {
     public Aplicacion() {
     }
 
+
     public void menu() {
         // TODO implement here
     }
@@ -26,14 +28,19 @@ public class Aplicacion {
     /**
      * @param jugador
      */
+
     public void nuevaPartida(Jugador jugador) {
+
         // TODO implement here
+ 
     }
 
     /**
      * 
      */
+  
     public void mostrartTablaDePosiciones() {
+
         // TODO implement here
     }
 
@@ -41,6 +48,7 @@ public class Aplicacion {
      * @param jugador
      */
     public void actualizarTablaDePosiciones(Jugador jugador) {
+
         // TODO implement here
     }
 
@@ -48,6 +56,7 @@ public class Aplicacion {
      * @param nombreJugador
      */
     private void nuevoJuegador(String nombreJugador) {
+
         // TODO implement here
     }
 
