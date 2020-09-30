@@ -41,7 +41,7 @@ public class Area {
      * @param ancho 
      * @param alto
      */
-    public void cambiarTamaño(float ancho, float alto) {
+    public void cambiarTamano(float ancho, float alto) {
         this.ancho = ancho;
         this.alto = alto;
     }
