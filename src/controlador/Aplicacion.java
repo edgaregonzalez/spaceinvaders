@@ -3,7 +3,6 @@ package controlador;
 import java.util.*;
 
 import modelo.Jugador;
-import modelo.Partida;
 import modelo.TablaDePosiciones;
 
 /**
@@ -13,10 +12,7 @@ public class Aplicacion {
 	
 
     private TablaDePosiciones tablaDePosiciones;
-
     private Jugador jugador;
-
-    private Partida partida;
 
     /**
      * Default constructor
@@ -24,17 +20,35 @@ public class Aplicacion {
     public Aplicacion() {
     }
 
-    /**
-     * 
-     */
-    private void mostrartTablaDePosiciones() {
+
+    public void menu() {
         // TODO implement here
     }
 
     /**
      * @param jugador
      */
-    private void actualizarTablaDePosiciones(Jugador jugador) {
+
+    public void nuevaPartida(Jugador jugador) {
+
+        // TODO implement here
+ 
+    }
+
+    /**
+     * 
+     */
+  
+    public void mostrartTablaDePosiciones() {
+
+        // TODO implement here
+    }
+
+    /**
+     * @param jugador
+     */
+    public void actualizarTablaDePosiciones(Jugador jugador) {
+
         // TODO implement here
     }
 
@@ -42,34 +56,7 @@ public class Aplicacion {
      * @param nombreJugador
      */
     private void nuevoJuegador(String nombreJugador) {
-        // TODO implement here
-    }
 
-    /**
-     * 
-     */
-    public void nuevaPartida() {
-        // TODO implement here
-    }
-
-    /**
-     * 
-     */
-    public void moverDerecha() {
-        // TODO implement here
-    }
-
-    /**
-     * 
-     */
-    public void moverIzquierda() {
-        // TODO implement here
-    }
-
-    /**
-     * 
-     */
-    public void disparar() {
         // TODO implement here
     }
 

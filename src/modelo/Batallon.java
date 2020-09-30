@@ -15,7 +15,8 @@ public class Batallon {
     private float distanciaEntreNaves = 0.2f;
     private float distanciaEntreFilas = 0.2f;
     
-    public Batallon(Mapa mapa) {
+    public Batallon(Mapa mapa, float velocidad) {
+    	this.velocidad = velocidad;
     	enemigos = new Nave[enemigosPorFila * filas];
     	for(int i = 0; i < filas; i++) 
     	{

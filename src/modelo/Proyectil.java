@@ -21,16 +21,15 @@ public class Proyectil extends ObjetoDelMapa {
         super(mapa);
         this.posicionRelativa(x, y);
         direccionHaciaArriba = desplazamientoHaciaArriba;
+        if(!direccionHaciaArriba) { velocidad = -velocidad; }
     }
 
+    public Boolean devolverDireccion() { return direccionHaciaArriba; }
     /**
      * 
      */
-    public void mover() {
-        if(direccionHaciaArriba) { this.posicionRelativa(this.xRelativo(), this.yRelativo() + velocidad); }
-        else { this.posicionRelativa(this.xRelativo(), this.yRelativo() - velocidad); }
-    }
-
+    public void mover() { this.posicionRelativa(this.xRelativo(), this.yRelativo() + velocidad); }
+    
     /**
      * 
      */
