@@ -22,7 +22,7 @@ public class Batallon {
     	{
     		for(int j = 0; j < enemigosPorFila; j++) 
     		{
-    			enemigos[j + i*3] = new Nave(( ( j + 1 ) * (distanciaEntreNaves + 1) ), 50 + (i * (distanciaEntreFilas + 1)), mapa);
+    			enemigos[j + (5*i)] = new Nave(( ( j + 1 ) * (distanciaEntreNaves + 1) ), 50 + (i * (distanciaEntreFilas + 1)), mapa);
     		}
     	}
     }
@@ -34,9 +34,9 @@ public class Batallon {
         if(enemigos[0].xRelativo() + velocidad <= 0 || enemigos[enemigosPorFila - 1].xRelativo() + velocidad >= enemigos[enemigosPorFila - 1].mapa.devolverArea().devolverAncho()) 
         {
         	velocidad = -velocidad; 
-        	for(int i = 0; i < 15; i++) { enemigos[i].posicionRelativa(enemigos[i].xRelativo(), enemigos[i].yRelativo() - Math.abs(velocidad)); }
+        	for(Nave n:enemigos) { n.posicionRelativa(n.xRelativo(), n.yRelativo() - Math.abs(velocidad)); }
         }
-        else { for(int i = 0; i < 15; i++) { enemigos[i].posicionRelativa(enemigos[i].xRelativo() + velocidad, enemigos[i].yRelativo()); } }
+        else { for(Nave n:enemigos) { n.posicionRelativa(n.xRelativo() + velocidad, n.yRelativo()); } }
     }
 
     /**
