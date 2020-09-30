@@ -1,10 +1,7 @@
 package controlador;
 
+import modelo.*;
 import java.util.*;
-
-import modelo.Jugador;
-import modelo.TablaDePosiciones;
-
 /**
  * 
  */
@@ -12,52 +9,46 @@ public class Aplicacion {
 	
 
     private TablaDePosiciones tablaDePosiciones;
-    private Jugador jugador;
-
+    private Jugador jugador = null;
+    private Partida partida = null;
+    
     /**
      * Default constructor
      */
     public Aplicacion() {
-    }
 
+    	tablaDePosiciones = new TablaDePosiciones();
 
-    public void menu() {
-        // TODO implement here
     }
 
     /**
      * @param jugador
-     */
-
-    public void nuevaPartida(Jugador jugador) {
-
-        // TODO implement here
- 
-    }
-
-    /**
-     * 
      */
   
-    public void mostrartTablaDePosiciones() {
-
-        // TODO implement here
+    public void nuevaPartida(String nombreJugador) {
+        if(jugador == null) { jugador = new Jugador(nombreJugador); }
+        if(partida == null) 
+        {
+        	partida = new Partida(jugador);
+        	
+        	Timer timer = new Timer();
+        	TimerTask task = new TimerTask() {
+				@Override
+				public void run() {
+					if(!partida.actualizar()) 
+		        	{
+						timer.cancel();
+		        		partida = null;
+		        		if(jugador.conseguirVidas() > 0) { nuevaPartida(nombreJugador); }
+		        		else { tablaDePosiciones.nuevaPuntuacion(jugador); }
+		        	}
+				}
+			};
+			timer.scheduleAtFixedRate(task, 0, 30);
+        }
     }
-
-    /**
-     * @param jugador
-     */
-    public void actualizarTablaDePosiciones(Jugador jugador) {
-
-        // TODO implement here
-    }
-
-    /**
-     * @param nombreJugador
-     */
-    private void nuevoJuegador(String nombreJugador) {
-
-        // TODO implement here
-    }
+    public void moverDerecha() { if(partida != null) { partida.intentarDesplazarNave(true); } }
+    public void moverIzquierda() { if(partida != null) { partida.intentarDesplazarNave(false); } }
+    public void disparar() { if(partida != null) { partida.intentarDisparar();; } }
 
 }
