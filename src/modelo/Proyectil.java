@@ -22,6 +22,7 @@ public class Proyectil extends ObjetoDelMapa {
         this.posicionRelativa(x, y);
         direccionHaciaArriba = desplazamientoHaciaArriba;
         if(!direccionHaciaArriba) { velocidad = -velocidad; }
+        this.devolverArea().cambiarTamaño(0.1f, 0.5f);
     }
 
     public Boolean devolverDireccion() { return direccionHaciaArriba; }
