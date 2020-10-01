@@ -1,5 +1,5 @@
 package modelo;
-
+import vista.*;
 
 /**
  * 
@@ -58,4 +58,5 @@ public abstract class Objeto {
      */
     public void cambiarEstado(boolean estado) { activo = estado; }
 
+    public ObjetoVista aVista() { return new ObjetoVista(posicion.x(), posicion.y(), area.devolverAncho(), area.devolverAlto(), activo); }
 }

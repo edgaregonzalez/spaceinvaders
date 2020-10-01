@@ -13,7 +13,7 @@ public abstract class ObjetoDelMapa extends Objeto {
      * @param mapa
      */
     public ObjetoDelMapa(Mapa mapa) {
-        super(0,0,1,1);
+        super(0,0,20,20);
         this.mapa = mapa;
     }
 

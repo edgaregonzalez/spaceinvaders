@@ -11,9 +11,9 @@ public class Batallon {
     private Nave[] enemigos;
     private int filas = 3;
     private int enemigosPorFila = 5;
-    private float velocidad = 1.0f;
-    private float distanciaEntreNaves = 0.2f;
-    private float distanciaEntreFilas = 0.2f;
+    private float velocidad = 10f;
+    private float distanciaEntreNaves = 30f;
+    private float distanciaEntreFilas = 30f;
     
     public Batallon(Mapa mapa, float velocidad) {
     	this.velocidad = velocidad;
@@ -22,7 +22,7 @@ public class Batallon {
     	{
     		for(int j = 0; j < enemigosPorFila; j++) 
     		{
-    			enemigos[j + (5*i)] = new Nave(( ( j + 1 ) * (distanciaEntreNaves + 1) ), 50 + (i * (distanciaEntreFilas + 1)), mapa);
+    			enemigos[j + (5*i)] = new Nave(( ( j + 1 ) * (distanciaEntreNaves + 20) ), 100 + (i * (distanciaEntreFilas + 20)), mapa);
     		}
     	}
     }
@@ -34,7 +34,7 @@ public class Batallon {
         if(enemigos[0].xRelativo() + velocidad <= 0 || enemigos[enemigosPorFila - 1].xRelativo() + velocidad >= enemigos[enemigosPorFila - 1].mapa.devolverArea().devolverAncho()) 
         {
         	velocidad = -velocidad; 
-        	for(Nave n:enemigos) { n.posicionRelativa(n.xRelativo(), n.yRelativo() - Math.abs(velocidad)); }
+        	for(Nave n:enemigos) { n.posicionRelativa(n.xRelativo(), n.yRelativo() + Math.abs(velocidad)); }
         }
         else { for(Nave n:enemigos) { n.posicionRelativa(n.xRelativo() + velocidad, n.yRelativo()); } }
     }

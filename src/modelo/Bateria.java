@@ -5,7 +5,7 @@ package modelo;
  */
 public class Bateria extends ObjetoDelMapa {
 	
-    private float velocidad = 1.0f;
+    private float velocidad = 3f;
 
     /**
      * Default constructor
@@ -14,7 +14,8 @@ public class Bateria extends ObjetoDelMapa {
      */
     public Bateria(float x, Mapa mapa) {
         super(mapa);
-        this.posicionRelativa(x, 10);
+        this.posicionRelativa(x, 400);
+        this.devolverArea().cambiarTamaño(20, 20);
     }
 
     /**

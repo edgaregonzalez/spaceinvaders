@@ -1,5 +1,6 @@
 package modelo;
 
+import vista.*;
 /**
  * 
  */
@@ -19,6 +20,7 @@ public class Jugador {
      */
     public Jugador(String nombre) {
         this.nombre = nombre;
+        vidas = 3;
     }
 
     /**
@@ -67,11 +69,8 @@ public class Jugador {
      * @return
      */
     public boolean disminuirVidas() {
-        if(vidas > 0) 
-        {
-        	vidas--;
-        	return true;
-        }
+    	vidas--;
+    	if(vidas > 0) { return true; }
         else { return false; }
     }
 
@@ -80,4 +79,5 @@ public class Jugador {
      */
     private void incrementarVidas() { vidas++; }
 
+    public JugadorVista aVista() { return new JugadorVista(nombre, puntuacion, vidas, nivel); }
 }
