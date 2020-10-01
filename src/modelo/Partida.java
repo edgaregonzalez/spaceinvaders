@@ -132,4 +132,67 @@ public class Partida {
     
     private void fin() { estado = Estados.Fin; }
 
+	public Jugador getJugador() {
+		return jugador;
+	}
+
+	public void setJugador(Jugador jugador) {
+		this.jugador = jugador;
+	}
+
+	public Mapa getMapa() {
+		return mapa;
+	}
+
+	public void setMapa(Mapa mapa) {
+		this.mapa = mapa;
+	}
+
+	public Bateria getBateria() {
+		return bateria;
+	}
+
+	public void setBateria(Bateria bateria) {
+		this.bateria = bateria;
+	}
+
+	public Muro[] getMuros() {
+		return muros;
+	}
+
+	public void setMuros(Muro[] muros) {
+		this.muros = muros;
+	}
+
+	public Batallon getBatallon() {
+		return batallon;
+	}
+
+	public void setBatallon(Batallon batallon) {
+		this.batallon = batallon;
+	}
+
+	public List<Proyectil> getProyectiles() {
+		return proyectiles;
+	}
+
+	public void setProyectiles(List<Proyectil> proyectiles) {
+		this.proyectiles = proyectiles;
+	}
+
+	public Dificultades getDificultad() {
+		return dificultad;
+	}
+
+	public void setDificultad(Dificultades dificultad) {
+		this.dificultad = dificultad;
+	}
+
+	public Estados getEstado() {
+		return estado;
+	}
+
+	public void setEstado(Estados estado) {
+		this.estado = estado;
+	}
 }

@@ -80,4 +80,43 @@ public class Jugador {
      */
     private void incrementarVidas() { vidas++; }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getNivel() {
+        return nivel;
+    }
+
+    public void setNivel(int nivel) {
+        this.nivel = nivel;
+    }
+
+    public int getVidas() {
+        return vidas;
+    }
+
+    public void setVidas(int vidas) {
+        this.vidas = vidas;
+    }
+
+    public int getPuntuacion() {
+        return puntuacion;
+    }
+
+    public void setPuntuacion(int puntuacion) {
+        this.puntuacion = puntuacion;
+    }
+
+    public int getPuntuacionRestante() {
+        return puntuacionRestante;
+    }
+
+    public void setPuntuacionRestante(int puntuacionRestante) {
+        this.puntuacionRestante = puntuacionRestante;
+    }
 }
