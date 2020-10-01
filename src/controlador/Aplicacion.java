@@ -8,6 +8,7 @@ import vista.*;
  */
 public class Aplicacion {
 	
+
 	private static Aplicacion instancia = null;
     private TablaDePosiciones tablaDePosiciones;
     private Jugador jugador = null;
@@ -16,8 +17,11 @@ public class Aplicacion {
     /**
      * Default constructor
      */
+
     private Aplicacion() {
+  
     	tablaDePosiciones = new TablaDePosiciones();
+
     }
 
     public static Aplicacion devolverInstancia() 
@@ -28,6 +32,7 @@ public class Aplicacion {
     /**
      * @param jugador
      */
+
     public void nuevaPartida(String nombreJugador) 
     {
         if(jugador == null) { jugador = new Jugador(nombreJugador); }
@@ -48,8 +53,7 @@ public class Aplicacion {
     public void moverBatallon() { if(partida != null) { partida.moverBatallon(); } }
     public void moverDerecha() { if(partida != null) { partida.intentarDesplazarNave(true); } }
     public void moverIzquierda() { if(partida != null) { partida.intentarDesplazarNave(false); } }
-    public void disparar() { if(partida != null) { partida.intentarDisparar();; } }
-    
+    public void disparar() { if(partida != null) { partida.intentarDisparar();; } }  
     public PartidaVista devolverPartida() { if(partida != null) { return partida.devolverPartida(); } else { return null; } }
     public JugadorVista devolverJugador() { if(jugador != null) { return jugador.aVista(); } else { return null; } }
     public TablaDePosicionesVista devolverTabla() { return tablaDePosiciones.aVista(); }
@@ -58,4 +62,5 @@ public class Aplicacion {
     public List<ObjetoVista> devolverMuros(){ if(partida != null) { return partida.devolverMuros(); } else { return null; } }
     public List<ObjetoVista> devolverNaves(){ if(partida != null) { return partida.devolverNaves(); } else { return null; } }
     public List<ObjetoVista> devolverProyectiles(){ if(partida != null) { return partida.devolverProyectiles(); } else { return null; } }
+
 }

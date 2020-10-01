@@ -108,7 +108,7 @@ public class Partida {
         				if(p.verificarColision(m)) 
         				{
         					System.out.println("Fuego Amigo");
-        					m.recibirDaño(10);
+        					m.recibirDaï¿½o(10);
         					p.eliminarProyectil();
         				}    				
     				} 			
@@ -136,14 +136,14 @@ public class Partida {
         				if(p.verificarColision(m)) 
         				{
         					System.out.println("Colision con Muro");
-        					m.recibirDaño(5); 
+        					m.recibirDaï¿½o(5); 
         					p.eliminarProyectil();
         				}
     				}
 
     				if(p.verificarColision(bateria)) 
     				{
-    					System.out.println("Recibiste Daño");
+    					System.out.println("Recibiste Daï¿½o");
     					p.eliminarProyectil();
     					if( !jugador.disminuirVidas() ) 
     					{
@@ -178,5 +178,5 @@ public class Partida {
     }
     
     private void fin() { estado = Estados.Fin; }
-    
+
 }
