@@ -13,6 +13,7 @@ public class Nave extends ObjetoDelMapa {
     public Nave(float x, float y,Mapa mapa) {
     	super(mapa);
     	this.posicionRelativa(x, y);
+        this.devolverArea().cambiarTamaño(10, 20);
     }
 
     /**

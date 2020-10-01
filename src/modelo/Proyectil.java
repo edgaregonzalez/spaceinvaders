@@ -7,7 +7,7 @@ package modelo;
 public class Proyectil extends ObjetoDelMapa {
 	
 
-    private float velocidad = 1.0f;
+    private float velocidad = 1f;
     private boolean direccionHaciaArriba;
 
     /**
@@ -22,14 +22,14 @@ public class Proyectil extends ObjetoDelMapa {
         this.posicionRelativa(x, y);
         direccionHaciaArriba = desplazamientoHaciaArriba;
         if(!direccionHaciaArriba) { velocidad = -velocidad; }
-        this.devolverArea().cambiarTamaño(0.1f, 0.5f);
+        this.devolverArea().cambiarTamaño(10f, 10f);
     }
 
     public Boolean devolverDireccion() { return direccionHaciaArriba; }
     /**
      * 
      */
-    public void mover() { this.posicionRelativa(this.xRelativo(), this.yRelativo() + velocidad); }
+    public void mover() { this.posicionRelativa(this.xRelativo(), this.yRelativo() - velocidad); }
     
     /**
      * 
